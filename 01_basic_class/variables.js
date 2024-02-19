@@ -1,8 +1,18 @@
-const accountId = 12345;
-let accountEmail = "prk@gmail.com";
-var accountCity = "Patna";
-accountCity = "Hyderbad";
- 
-console.table([accountId,accountCity,accountEmail,accountCity]);
+const prkId = 1234;
+
+let prkName = "Pranjay Kumar"
+
+var prkAddress = "02-Noida";
+prkcity = "Hyderabad"
+
+prkName = "prk7488";
+prkAddress = "Uniated State Of America";
+prkcity = "New Delhi";
+
+
+
+console.log(prkName);
+
+console.table([prkId , prkName , prkcity , prkAddress]);
 
 
