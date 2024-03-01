@@ -50,6 +50,6 @@ const myOnj = {
     age = 24
 }
 
-const function () {
+const function() {
     console.log(typeof Pranjay);
 }
