@@ -1,4 +1,4 @@
-//const cargameuser = new Object();    non sigleton
+//const cargameuser = new Object();    //non sigleton
 
 const cargameuser = {}  //singleton
 
@@ -47,10 +47,39 @@ const users =[
 ];
 
 users[1].email;
+
 console.log(cargameuser);
 
 console.log(Object.keys(cargameuser));
+
 console.log(Object.values(cargameuser));
+
 console.log(Object.entries(cargameuser));
 
 console.log(Object.hasOwnProprty("isLoggedIn"));
+
+
+
+
+
+const course = {
+    coursename: "DSA with prk",
+    price: "999",
+    courseInstructor: "Pranjay"
+}
+
+const {courseInstructor:instructor} = course;
+
+console.log(instructor);
+
+// const navbar = ({company}) => {
+
+// }    // in react 
+
+// navbar(company="Pilog");
+
+// {
+//     "name":"pranjay",
+//     "age":"25",
+//     "gender":"male"
+// }
