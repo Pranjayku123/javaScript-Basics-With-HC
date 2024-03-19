@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .titleText{
+            background-color: #212111;
+            color: #fff;
+            font-size: 18px;
+            text-align: center;
+            padding: 6px;
+        }
+        .ulClass{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+        }
+        .colorBox{
+            width: 40px;
+            height: 40px;
+            border: 1px solid #fff;
+            padding: 2px;
+            border-radius: 50%;
+            list-style: none;
+        }
+        #colorBoxId0{
+            background-color: #fff;
+        }
+        #colorBoxId1{
+            background-color: #366297;
+        }
+        #colorBoxId2{
+            background-color: rgb(58, 82, 82);
+        }
+        #colorBoxId3{
+            background-color: brown;
+        }
+        #colorBoxId4{
+            background-color: chocolate;
+        }
+        #colorBoxId5{
+            background-color: coral;
+        }
+        #colorBoxId6{
+            background-color: cadetblue;
+        }
+        #colorBoxId7{
+            background-color: gray;
+        }
+        #colorBoxId8{
+            background-color: #284902;
+        }
+        #colorBoxId9{
+            background-color: limegreen;
+        }
+        #colorBoxId10{
+
+            background-color: #222c17;
+        }
+
+        
+    </style>
+</head>
+<body>
+    <div id="titleText">This is colorchanger of web page's background which is based on javaScript | [ -DOM-]</div>
+    <ul id="colorPickerMainId"></ul>
+</body>
+<script>
+    const bodyCustmize = document.querySelector("body");
+    bodyCustmize.style.backgroundColor ="#212121";
+    const pageTitle = document.getElementById("titleText");
+    pageTitle.classList.add("titleText");
+    const setClass = document.getElementById("colorPickerMainId");
+    setClass.classList.add("ulClass")
+    const createLiElement = () => {
+    const setLi = document.getElementById("colorPickerMainId");
+
+    for (let i = 0; i < 10; i++) {
+        const listTag = document.createElement("li");
+        listTag.classList.add("colorBox"); 
+        listTag.id = `colorBoxId${i}`;
+        setLi.appendChild(listTag);
+    }
+
+    document.querySelectorAll(".colorBox").forEach(function(colorBox) {
+        // console.log(getColor);
+    colorBox.addEventListener("click", function() {
+        const color = colorBox.style.backgroundColor;
+        document.body.style.backgroundColor = color;
+    });
+});
+}
+
+createLiElement();
+
+
+
+</script>
+</html>
