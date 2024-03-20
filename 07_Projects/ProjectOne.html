@@ -27,7 +27,7 @@
             list-style: none;
         }
         #colorBoxId0{
-            background-color: #fff;
+            background-color: #f1f1f1;
         }
         #colorBoxId1{
             background-color: #366297;
@@ -77,19 +77,17 @@
     setClass.classList.add("ulClass")
     const createLiElement = () => {
     const setLi = document.getElementById("colorPickerMainId");
-
     for (let i = 0; i < 10; i++) {
         const listTag = document.createElement("li");
         listTag.classList.add("colorBox"); 
         listTag.id = `colorBoxId${i}`;
         setLi.appendChild(listTag);
     }
-
-    document.querySelectorAll(".colorBox").forEach(function(colorBox) {
-        // console.log(getColor);
+    const clrlist = document.querySelectorAll(".colorBox");
+    clrlist.forEach(function(colorBox) {
     colorBox.addEventListener("click", function() {
-        const color = colorBox.style.backgroundColor;
-        document.body.style.backgroundColor = color;
+        const colorStyle = window.getComputedStyle(colorBox);
+        document.body.style.backgroundColor = colorStyle.backgroundColor;
     });
 });
 }
