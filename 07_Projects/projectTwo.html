@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+        background-color: #414141;
+        color: aliceblue;
+        font-family: sans-serif;
+    }
+
+    .bmiClaculatorMain {
+        width: 60%;
+        height: 70vh;
+        margin: 20px auto;
+        border: 2px solid #ddd;
+        border-radius: 12px;
+    }
+
+    .titlaText {
+        text-align: center;
+        background-color: chocolate;
+        padding: 8px 0px 8px 0px;
+        width: 100%;
+        margin: 0px 0px 20px 0px;
+        border-top-left-radius: 12px;
+        border-top-right-radius: 12px;
+    }
+
+    .allInputFilds {
+        margin: 30px;
+        font-family: math;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+
+    }
+
+    .button {
+        padding: 12px 24px;
+        border: 1px solid #f1f1f1;
+        width: fit-content;
+        margin: 20px auto;
+        border-radius: 12px;
+        background-color: chocolate;
+    }
+</style>
+
+<body>
+    <div class="bmiClaculatorMain">
+        <h3 class="titlaText">BMI Caculator</h3>
+        <div class="allInputFilds">
+            <div><label for="height">Enter You Height In CM</label>
+                <input type="text" placeholder="170" id="height">
+            </div>
+            <div><label for="weight">Enter your weight</label>
+                <input type="text" placeholder="65" id="weight">
+            </div>
+        </div>
+        <div class="button">Calculate</div>
+        <div class="bmiResults"></div>
+        <div class="guider">
+            <h3 class="guideTitle">BMI Weight guide</h3>
+            <div>Under weight = Less then 18.6</div>
+            <div>Noramal weight = 18.6 To 24.9</div>
+            <div>Over weight = More then 24.9</div>
+        </div>
+    </div>
+</body>
+
+</html>
