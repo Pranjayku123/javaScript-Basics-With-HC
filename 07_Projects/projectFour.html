@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+        body{
+            background-color: #414141;
+            color: #fff;
+        }
+        .mainBoxContainer .boxParent{
+            position: relative;
+            /* display: grid;
+            grid-template-columns: repeat(5 , auto);
+            border: 2px solid #ddd; */
+        }
+        .mainBoxContainer .boxParent li{
+           
+            border: 2px silid #fff;
+            padding: 2px;
+            margin: 6px;
+            height: 50px;
+            list-style: none;
+            width: 150px;
+        }
+    </style>
+    </head>
+    <body>
+        <div class="mainBoxContainer">
+            <ul class="boxParent"></ul>
+        </div>
+    </body>
+    <script>
+   const mainBox = document.querySelector('.mainBoxContainer');
+
+function boxRemover() {
+    const boxParent = document.querySelector('.boxParent');
+    for (let i = 0; i < 10; i++) {
+        const makeLi = document.createElement('li');
+        makeLi.setAttribute('id', `child${i}`);
+        boxParent.prepend(makeLi);
+    }
+    const listItems = document.querySelectorAll('.boxParent li');
+    listItems.forEach(function(li) { 
+        let randomColor = 'rgb(' + Math.floor(Math.random() * 256) + ', ' +
+                          Math.floor(Math.random() * 256) + ', ' +
+                          Math.floor(Math.random() * 256) + ')';
+        li.style.backgroundColor = randomColor;
+    });
+    boxParent.addEventListener('click', (e) => {
+        const currentTarget = e.target;
+        currentTarget.remove();
+    });
+}
+    boxRemover();
+</script>
+</html>
