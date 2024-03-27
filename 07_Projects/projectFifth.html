@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+            div{
+                width: 80%;
+                height: 80vh;
+                margin: 30px auto;
+                border: 1px solid;
+            }
+            button{
+                text-align: center;
+                margin: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="colorChanger"></div>
+        <button id="start">Start</button>
+        <button id="stop">Stop</button>
+    </body>
+    <script>
+    const clrChangerBox = document.getElementById('colorChanger');
+    let colors = [];
+    const startfn = document.getElementById('start');
+    const stoptfn = document.getElementById('stop');
+    let interval
+    startfn.addEventListener('click' , function(){
+        interval =  setInterval(
+        function changerColor(e){
+        const randomColor = "#" + Math.floor(Math.random() * 16777215).toString(16);
+        colors.push(randomColor);
+        clrChangerBox.style.backgroundColor = randomColor;   
+    }    
+    ,1000)
+    })
+    stoptfn.addEventListener('click', function(st) {
+    clearInterval(interval);  
+});
+    
+    
+</script>
+</html>
