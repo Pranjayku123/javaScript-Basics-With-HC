@@ -13,7 +13,7 @@ const regularUser = {
     fullname:{
         userfullname: {
             firstName: "Pranjay",
-            lastName: "Kumar"
+            lastName: "Kumar" 
         }
     }
 }
@@ -48,15 +48,15 @@ const users =[
 
 users[1].email;
 
-console.log(cargameuser);
+// console.log(cargameuser);
 
-console.log(Object.keys(cargameuser));
+// console.log(Object.keys(cargameuser));
 
-console.log(Object.values(cargameuser));
+// console.log(Object.values(cargameuser));
 
-console.log(Object.entries(cargameuser));
+// console.log(Object.entries(cargameuser));
 
-console.log(Object.hasOwnProprty("isLoggedIn"));
+// console.log(Object.hasOwnProprty("isLoggedIn"));
 
 
 
